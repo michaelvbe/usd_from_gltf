@@ -80,22 +80,22 @@ endif (NOT TURBOJPEG_LIBRARY)
 if (MSVC)
 target_link_libraries(process
   common
-  "${ZLIB_LIBRARIES}"
   "${draco_LIBRARY_DIR}/dracodec.lib"
   "${giflib_LIBRARY_DIR}/giflib.lib"
   "${stb_image_LIBRARY_DIR}/stb_image.lib"
   "${PNG_LIBRARY}"
+  "${ZLIB_LIBRARIES}"
   "${TURBOJPEG_LIBRARY}"
 )
 else (MSVC)
 
 target_link_libraries(process
   common
-  "${ZLIB_LIBRARIES}"
   "${draco_LIBRARY_DIR}/libdracodec.a"
   "${giflib_LIBRARY_DIR}/libgiflib.a"
   "${stb_image_LIBRARY_DIR}/libstb_image.a"
   "${PNG_LIBRARY}"
+  "${ZLIB_LIBRARIES}"
   "${TURBOJPEG_LIBRARY}"
 )
 endif (MSVC)
